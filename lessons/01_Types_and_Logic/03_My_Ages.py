@@ -42,9 +42,13 @@ window.withdraw() # Hide the window; we just want to see pop ups
 # and create a message
 
 # Show the message to the user
-
-
-
+age=input ("how old are you?")
+if age < 3: print ("you are a baby!")
+if age < 5: print ("you are a toddler!")
+if age < 12: print ("you are a child!")
+if age < 19: print ("you are a teen!")
+if age < 64: print ("you are an adult!")
+if age > 65: print ("you are a senior!")
 window.mainloop()  # Keeps the window open
 
 
