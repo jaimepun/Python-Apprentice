@@ -33,14 +33,14 @@ at the bottom of the editor screen; this program does not use the GUI.
 import random
 
 def ask_integer(prompt):
-    """Function to ask the user for an integer"""
+    input ("try to guess the number I am thinking of /(the number is not divisible by 7)/ ")
     while True:
         try:
             return int(input(prompt))
         except ValueError:
             print("Please enter a valid number!")
 
-
+ask_integer
 # Pick the random number
 
 # In your loop:
