@@ -16,8 +16,8 @@ Additionally, If you are displaying a number  color the numbers as follows:
 
 Here is how you can display a number in your grid. Call this function in your loop
 to display the number in the grid cell at the row and column you specify.
+Text(app, text=str(number), grid=[col, row], color=color)
 
-    Text(app, text=str(number), grid=[col, row], color=color)
 
 Or to display a badger: 
     
@@ -30,7 +30,8 @@ our you can convert the number to a string and iterate over the digits
 from guizero import App, Box, Text
 
 app = App("Numbers Grid", layout="grid")
-
+badgers=[5, 10, 20, 25, 30, 40, 50, 60, 70, 80
+         90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190]
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
 
@@ -40,6 +41,6 @@ app = App("Numbers Grid", layout="grid")
 
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
-# Call Text(app, text='...', grid=[col, row], color=...) to display something. 
+# Call Text(app, text='...', grid=[col, row], color=...) to display something.
 
 app.display()
