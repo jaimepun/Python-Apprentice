@@ -30,8 +30,20 @@ our you can convert the number to a string and iterate over the digits
 from guizero import App, Box, Text
 
 app = App("Numbers Grid", layout="grid")
-badgers=[5, 10, 20, 25, 30, 40, 50, 60, 70, 80
-         90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190]
+for col in range(10, 20, 5):
+    for row in range(15, 20, 5):
+    
+        print (col , row, end="")
+    print()
+
+    
+    if col % 5 == 0:
+        print(col, '🦡 badger')
+    
+    if row % 5 == 0:
+        print(row, '🦡 badger')
+
+
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
 
