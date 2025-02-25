@@ -30,27 +30,40 @@ our you can convert the number to a string and iterate over the digits
 from guizero import App, Box, Text
 
 app = App("Numbers Grid", layout="grid")
-for col in range(6):
-    for row in range(5):
+for col in range(10):
+    for row in range(10):
 
     
-            print (str(col) + str(row), end="")
-    print()
+        print (str(col) + str(row), end="")
+        
 
-    if col % 15 == 0:
-        print(col, '🐍 snake!')
-    elif col % 5 == 0:
-        print(col, '🦡 badger')
-    elif col % 3 == 0:
-        print(col, '🍄 mushroom')
-    if row % 15 == 0:
-        print(row, '🐍 snake!')
-    elif row % 5 == 0:
-        print(row, '🦡 badger')
-    elif row % 3 == 0:
-        print(row, '🍄 mushroom')
-    if col % 2==0:
-        Text(app, text='🦡', grid=[col, row], color='red')    
+        if col % 15 == 0:
+            print(col, '🐍 snake!')
+            text='🐍'
+        elif col % 5 == 0:
+            print(col, '🦡 badger')
+            text='🦡'
+        elif col % 3 == 0:
+            print(col, '🍄 mushroom')
+            text='🍄'
+        if row % 15 == 0:
+            print(row, '🐍 snake!')
+            text='🐍'
+        elif row % 5 == 0:
+            print(row, '🦡 badger')
+            text='🦡'
+        elif row % 3 == 0:
+            
+            text='🍄'
+        elif col % 2==0:
+             text=str() 
+        else:
+             text=str(str(col) + str(row))
+        if row % 2==0:
+            text=str()  
+        
+        
+        Text(app, text=text, grid=[col, row], color='red')
 
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
