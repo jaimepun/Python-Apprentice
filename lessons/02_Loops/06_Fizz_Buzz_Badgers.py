@@ -23,15 +23,16 @@ for i in range (5, 30, 5) : # Change only this line
 
 
     # Don't change anything below this line
-    if i % 15 == 0:
+    rint(i)
+
+
+# hint: run the program once and look at the numbers that are printed.
+# Maybe iterate over those numbers.
+if i % 15 == 0:
         print(i, '🐍 snake!')
     elif i % 5 == 0:
         print(i, '🦡 badger')
     elif i % 3 == 0:
         print(i, '🍄 mushroom')
     else:
-        print(i)
-
-
-# hint: run the program once and look at the numbers that are printed.
-# Maybe iterate over those numbers.
+        p

@@ -30,19 +30,27 @@ our you can convert the number to a string and iterate over the digits
 from guizero import App, Box, Text
 
 app = App("Numbers Grid", layout="grid")
-for col in range(10, 20, 5):
-    for row in range(15, 20, 5):
+for col in range(6):
+    for row in range(5):
+
     
-        print (col , row, end="")
+            print (str(col) + str(row), end="")
     print()
 
-    
-    if col % 5 == 0:
+    if col % 15 == 0:
+        print(col, '🐍 snake!')
+    elif col % 5 == 0:
         print(col, '🦡 badger')
-    
-    if row % 5 == 0:
+    elif col % 3 == 0:
+        print(col, '🍄 mushroom')
+    if row % 15 == 0:
+        print(row, '🐍 snake!')
+    elif row % 5 == 0:
         print(row, '🦡 badger')
-
+    elif row % 3 == 0:
+        print(row, '🍄 mushroom')
+    if col % 2==0:
+        Text(app, text='🦡', grid=[col, row], color='red')    
 
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
