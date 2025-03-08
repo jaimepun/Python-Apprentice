@@ -35,7 +35,7 @@ for col in range(10):
 
     
         print (str(col) + str(row), end="")
-        
+        Color = "black"
 
         if col % 15 == 0:
             print(col, '🐍 snake!')
@@ -53,27 +53,26 @@ for col in range(10):
             print(row, '🦡 badger')
             text='🦡'
         elif row % 3 == 0:
-            
             text='🍄'
-        elif col % 2==0:
-             text=str() 
-        else:
-             text=str(str(col) + str(row))
-        if row % 2==0:
-            text=str()  
         
+        elif row % 2==0:
+            text=str(str(col) + str(row))
+            Color='blue'
+        elif row % 2 >0:
+            text=str(str(col) + str(row))
+            Color='red'
+    
         
-        Text(app, text=text, grid=[col, row], color='red')
+        Text(app, text=text, grid=[col, row], color=Color)
+# Create a 10x10 grid using nested loops DONE
+# Or you can use a single loop and calculate the row and column 
 
-# Create a 10x10 grid using nested loops
-# Or you can use a single loop and calculate the row and column
+# In the loop, calculate or increment the number DONE, (from top to bottom)
 
-# In the loop, calculate or increment the number
+# Use % determing the display, using fizzbuzz rules DONE
 
-# Use % determing the display, using fizzbuzz rules
+# If you are displaying a number, calculate the sum of the digits and determine the color DONE
 
-# If you are displaying a number, calculate the sum of the digits and determine the color
-
-# Call Text(app, text='...', grid=[col, row], color=...) to display something.
+# Call Text(app, text='...', grid=[col, row], color=...) to display something. DONE
 
 app.display()
