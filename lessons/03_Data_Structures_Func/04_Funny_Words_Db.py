@@ -25,6 +25,11 @@ an error message will be displayed and new definitions will not be added.
 
 
 def add_definition(db, key, value):
+    db[key]=value
+    
+    
+    
+
     """
     Add a new definition to the database.
 
@@ -47,6 +52,7 @@ def add_definition(db, key, value):
 
 
 def delete_definition(db, key):
+    
     """
     Deletes the definition associated with the given key from the database.
 
@@ -64,6 +70,7 @@ def delete_definition(db, key):
 
 
 def is_funny(definition):
+    
     """
     Check if the definition is funny, which means it contains one of the words:
 
@@ -90,12 +97,9 @@ def update_listbox(db):
 
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
-    l = [
-        "Item 1: Fake Definition 1",
-        "Item 2: Fake Definition 2",
-        "Item 3: fake Definition 3"
-    ]
-
+    l = []
+    for key, value in db.items():
+        l.append(f"{key} : {value}")
     # Add each definition to a string
     # iterate over the dict's key-value pairs and turn them into
     # strings, then add the strings to the list with .append()
