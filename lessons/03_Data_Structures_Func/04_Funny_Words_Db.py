@@ -22,8 +22,7 @@ an error message will be displayed and new definitions will not be added.
 
 
 # Implement the functions below
-
-
+funny=['fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen']
 def add_definition(db, key, value):
     db[key]=value
     
@@ -52,6 +51,7 @@ def add_definition(db, key, value):
 
 
 def delete_definition(db, key):
+    db[key]=False
     
     """
     Deletes the definition associated with the given key from the database.
@@ -70,6 +70,10 @@ def delete_definition(db, key):
 
 
 def is_funny(definition):
+    for fun in funny:
+        if fun in definition:
+            return True
+    return False
     
     """
     Check if the definition is funny, which means it contains one of the words:
@@ -85,7 +89,6 @@ def is_funny(definition):
     
     # Return True if the definition contains any of the funny words, False otherwise
 
-    return False
 
 def update_listbox(db):
     """
